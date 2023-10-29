@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-3">
+        Araba Resimleri
+       </div>
+<div class="col-md-9">
+    <div *ngIf="carImages.length > 0" id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleIndicators" *ngFor="let carImage of carImages; let i = index"
+          [attr.data-bs-slide-to]="i" [class.active]="i == 0"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item" *ngFor="let carImage of carImages; let i = index" [class.active]="i == 0">
+          <img [src]="getImagePath(carImage)" class="d-block fit" alt="car image" />
+        </div>
+      </div>
+    </div>
+    </div>
+</div> 
