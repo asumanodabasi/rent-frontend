@@ -1,16 +1,8 @@
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Brands</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let brand of brands" >
-        <td>{{brand.brandId}}</td>
-        <td>{{brand.brandName}}</td>
-        
-        
-      </tr>
-      
-    </tbody>
-  </table>
+<ul class="list-group">
+  <li [class]="getAllBrandClass()" routerLink="/cars"> Tüm Markalar</li>
+  <li  (click)="setCurrentBrand(brand)" routerLink="/cars/brand/{{brand.brandId}}"
+  *ngFor="let brand of brands" [class]="getCurrentBrandClass(brand)">
+  {{brand.brandName}} </li>
+</ul>
+
+  <h5 *ngIf="currentBrands">{{currentBrands.brandName}} sectiniz</h5>
