@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Rental } from 'src/app/models/rental';
+import { Rental } from '../../models/rental';
+import { RentalService } from '../../services/rental.service';
 
-import { RentalService } from 'src/app/services/rental.service';
 
 @Component({
   selector: 'app-rental',

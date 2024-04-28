@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Car } from 'src/app/models/car';
-import { CarService } from 'src/app/services/car.service';
+import { CarService } from '../../services/car.service';
+import { Car } from '../../models/car';
 
 @Component({
   selector: 'app-car',
@@ -12,7 +12,7 @@ export class CarComponent implements OnInit{
  
   
   cars:Car[]=[];
-  cuurentCars:Car;
+  cuurentCars:Car | undefined;
   dataLoaded=false;
   constructor(private carService:CarService ,private activatedRoutes:ActivatedRoute) {
      

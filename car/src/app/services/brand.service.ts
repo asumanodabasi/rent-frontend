@@ -15,7 +15,7 @@ export class BrandService {
     
    }
 
-   apiUrl="https://localhost:44356/api/brands/getall";
+   apiUrl="https://localhost:44356/api/brands/getAll";
 
    getBrands():Observable<ListResponseModel<Brand>>{
     return this.httpClient.get<ListResponseModel<Brand>>(this.apiUrl);
